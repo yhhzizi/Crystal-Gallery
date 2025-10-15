@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crystal Gallery｜首页</title>
+  <meta name="description" content="Crystal Gallery 水晶画廊：探索与筛选水晶类别与单体。">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Crystal Gallery</h1>
+    <button id="filterToggle" class="filter-toggle" aria-controls="filterPanel" aria-expanded="false">筛选</button>
+  </header>
+
+  <aside id="filterPanel" class="filter-panel" hidden>
+    <h2>筛选</h2>
+    <fieldset>
+      <legend>地域</legend>
+      <label><input type="checkbox" name="region" value="asia"> 亚洲</label>
+      <label><input type="checkbox" name="region" value="europe"> 欧洲</label>
+      <label><input type="checkbox" name="region" value="americas"> 美洲</label>
+    </fieldset>
+    <fieldset>
+      <legend>颜色</legend>
+      <label><input type="checkbox" name="color" value="clear"> 透明</label>
+      <label><input type="checkbox" name="color" value="pink"> 粉</label>
+      <label><input type="checkbox" name="color" value="purple"> 紫</label>
+      <label><input type="checkbox" name="color" value="green"> 绿</label>
+    </fieldset>
+    <fieldset>
+      <legend>晶系</legend>
+      <label><input type="checkbox" name="system" value="hexagonal"> 六方</label>
+      <label><input type="checkbox" name="system" value="cubic"> 等轴</label>
+      <label><input type="checkbox" name="system" value="trigonal"> 三方</label>
+    </fieldset>
+    <div class="filter-actions">
+      <button id="clearFilters">清空</button>
+      <button id="closeFilters">收起</button>
+    </div>
+  </aside>
+
+  <main>
+    <section class="toolbar">
+      <label for="zoomRange">缩放：</label>
+      <input id="zoomRange" type="range" min="1" max="5" step="1" value="3" aria-label="缩放密度">
+      <span id="zoomHint" aria-live="polite"></span>
+    </section>
+
+    <section id="gallery" class="gallery" aria-label="水晶图片画廊"></section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="./category.html">类别页</a>
+      <a href="./detail.html">详情页示例</a>
+    </nav>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

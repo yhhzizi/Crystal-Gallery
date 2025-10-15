@@ -1,0 +1,64 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: #F6F6F6; /* PRD 指定首页背景色 */
+  color: #222;
+}
+.site-header, .site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+  position: sticky;
+}
+.site-header { top: 0; }
+.site-footer { bottom: 0; }
+.site-title { margin: 0; font-size: 18px; }
+.filter-toggle { padding: 6px 10px; }
+
+.filter-panel {
+  position: fixed;
+  right: 12px;
+  top: 56px;
+  width: 280px;
+  max-width: calc(100% - 24px);
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  z-index: 10;
+}
+.filter-panel fieldset { margin: 8px 0; }
+.filter-actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+.toolbar { display: flex; gap: 8px; align-items: center; padding: 12px 16px; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+  padding: 0 16px 24px;
+}
+.card {
+  background: transparent;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+}
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 透明底素材适配 */
+  image-rendering: auto;
+}
+.placeholder {
+  background-image: url('./placeholder.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60% auto;
+}

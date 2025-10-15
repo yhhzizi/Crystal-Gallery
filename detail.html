@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crystal Gallery｜详情</title>
+  <meta name="description" content="Crystal Gallery 详情页：查看水晶细节、产地、纹路、特征。">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Crystal Gallery｜详情</h1>
+    <a href="./index.html" aria-label="返回首页">返回首页</a>
+  </header>
+
+  <main>
+    <article id="detail" class="detail" aria-live="polite">
+      <div class="detail-media">
+        <img id="detailImg" alt="" loading="lazy">
+      </div>
+      <div class="detail-info">
+        <h2 id="detailName">加载中…</h2>
+        <p id="detailIntro"></p>
+        <ul class="meta">
+          <li><strong>产地：</strong><span id="detailOrigin"></span></li>
+          <li><strong>纹路：</strong><span id="detailTexture"></span></li>
+          <li><strong>特征：</strong><span id="detailFeatures"></span></li>
+          <li><strong>晶系：</strong><span id="detailSystem"></span></li>
+          <li><strong>颜色：</strong><span id="detailColors"></span></li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="./category.html">类别页</a>
+      <a href="./index.html">首页</a>
+    </nav>
+  </footer>
+
+  <script src="./page-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "玫瑰石英",
+    "categoryId": "粉色系",
+    "origin": { "country": "巴西", "region": "米纳斯", "mine": "示例矿区" },
+    "colors": ["pink"],
+    "color": "pink",
+    "crystalSystem": "trigonal",
+    "features": { "hardness": "7", "cleavage": "不完全" },
+    "texture": "云雾状纹理",
+    "images": { "thumb": "", "full": "" },
+    "intro": "常见的粉色石英，常用于装饰与收藏。"
+  },
+  {
+    "id": 2,
+    "name": "紫水晶",
+    "categoryId": "紫色系",
+    "origin": { "country": "乌拉圭", "region": "阿蒂加斯", "mine": "示例矿区" },
+    "colors": ["purple"],
+    "color": "purple",
+    "crystalSystem": "trigonal",
+    "features": { "hardness": "7", "cleavage": "不完全" },
+    "texture": "晶面清晰，呈紫罗兰色",
+    "images": { "thumb": "", "full": "" },
+    "intro": "常见的石英变种，紫色来源与铁离子相关。"
+  },
+  {
+    "id": 3,
+    "name": "绿幽灵水晶",
+    "categoryId": "绿色系",
+    "origin": { "country": "巴西", "region": "巴伊亚", "mine": "示例矿区" },
+    "colors": ["green"],
+    "color": "green",
+    "crystalSystem": "trigonal",
+    "features": { "hardness": "7", "cleavage": "不完全" },
+    "texture": "包裹体形成层状幻影",
+    "images": { "thumb": "", "full": "" },
+    "intro": "内部包裹体呈现山峰或层纹的幻影效果。"
+  }
+]

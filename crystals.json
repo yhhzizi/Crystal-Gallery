@@ -9,7 +9,7 @@
     "crystalSystem": "trigonal",
     "features": { "hardness": "7", "cleavage": "不完全" },
     "texture": "云雾状纹理",
-    "images": { "thumb": "", "full": "" },
+    "images": { "thumb": "", "full": "", "gallery": ["", ""] },
     "intro": "常见的粉色石英，常用于装饰与收藏。"
   },
   {
@@ -22,7 +22,7 @@
     "crystalSystem": "trigonal",
     "features": { "hardness": "7", "cleavage": "不完全" },
     "texture": "晶面清晰，呈紫罗兰色",
-    "images": { "thumb": "", "full": "" },
+    "images": { "thumb": "", "full": "", "gallery": ["", ""] },
     "intro": "常见的石英变种，紫色来源与铁离子相关。"
   },
   {
@@ -35,7 +35,33 @@
     "crystalSystem": "trigonal",
     "features": { "hardness": "7", "cleavage": "不完全" },
     "texture": "包裹体形成层状幻影",
-    "images": { "thumb": "", "full": "" },
+    "images": { "thumb": "", "full": "", "gallery": ["", ""] },
     "intro": "内部包裹体呈现山峰或层纹的幻影效果。"
+  },
+  {
+    "id": 4,
+    "name": "白水晶",
+    "categoryId": "透明系",
+    "origin": { "country": "中国", "region": "四川", "mine": "示例矿区" },
+    "colors": ["clear"],
+    "color": "clear",
+    "crystalSystem": "trigonal",
+    "features": { "hardness": "7", "cleavage": "不完全" },
+    "texture": "透明至半透明，条纹清晰",
+    "images": { "thumb": "", "full": "", "gallery": ["", ""] },
+    "intro": "常见石英，透明度高，基础入门之选。"
+  },
+  {
+    "id": 5,
+    "name": "黄水晶",
+    "categoryId": "黄色系",
+    "origin": { "country": "巴西", "region": "南里奥格兰德", "mine": "示例矿区" },
+    "colors": ["yellow"],
+    "color": "yellow",
+    "crystalSystem": "trigonal",
+    "features": { "hardness": "7", "cleavage": "不完全" },
+    "texture": "色泽温暖，晶面干净",
+    "images": { "thumb": "", "full": "", "gallery": ["", ""] },
+    "intro": "色调从浅黄到金黄，常见于饰品与摆件。"
   }
 ]

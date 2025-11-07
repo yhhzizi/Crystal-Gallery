@@ -69,6 +69,32 @@ function getVisibleItems() {
   return filtered.slice(0, base);
 }
 
+function applyEvenColumnOffset() {
+  if (!gallery) return;
+  const cards = gallery.querySelectorAll('.card');
+  if (cards.length === 0) return;
+  
+  // 先清除所有偏移
+  cards.forEach(card => card.classList.remove('even-column'));
+  
+  const firstCard = cards[0];
+  const firstRect = firstCard.getBoundingClientRect();
+  const cardWidth = firstRect.width;
+  const gap = parseFloat(getComputedStyle(gallery).gap) || 12;
+  const galleryLeft = gallery.getBoundingClientRect().left;
+  
+  cards.forEach((card) => {
+    const cardRect = card.getBoundingClientRect();
+    const relativeLeft = cardRect.left - galleryLeft;
+    // 计算列索引：考虑 gap
+    const columnIndex = Math.round(relativeLeft / (cardWidth + gap));
+    // 偶数列（列索引从0开始，所以是奇数索引）添加偏移
+    if (columnIndex % 2 === 1) {
+      card.classList.add('even-column');
+    }
+  });
+}
+
 function render() {
   if (!gallery) return;
   const items = getVisibleItems();
@@ -87,6 +113,11 @@ function render() {
       window.location.href = `./detail.html?id=${item.id}`;
     });
     gallery.appendChild(card);
+  });
+
+  // 等待布局完成后，计算奇偶列并添加偏移
+  requestAnimationFrame(() => {
+    applyEvenColumnOffset();
   });
 }
 
@@ -191,4 +222,13 @@ if (closeFilters && filterPanel) {
   await loadData();
   render();
   writeParams();
+
+  // 窗口大小改变时重新计算奇偶列偏移
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      applyEvenColumnOffset();
+    }, 150);
+  });
 })();

@@ -106,7 +106,20 @@ function render() {
     const img = document.createElement('img');
     img.alt = item.name;
     img.loading = 'lazy';
-    if (item.img) img.src = item.img; // 有真实图片时展示
+    if (item.img) {
+      img.src = item.img; // 有真实图片时展示
+      img.onerror = function() {
+        // 如果图片加载失败，隐藏图片，显示占位符
+        this.style.display = 'none';
+      };
+      img.onload = function() {
+        // 图片加载成功，移除占位符背景
+        card.classList.remove('placeholder');
+      };
+    } else {
+      // 没有图片时，隐藏img元素，使用占位符
+      img.style.display = 'none';
+    }
     card.appendChild(img);
     card.title = `${item.name}`;
     card.addEventListener('click', () => {

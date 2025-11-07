@@ -56,7 +56,7 @@ body {
   height: var(--card-size);
 }
 .card.even-column {
-  transform: translateY(calc(var(--gap) / 2 + var(--card-size)));
+  transform: translateY(calc(var(--gap) / 2 + var(--card-size) / 2));
 }
 .card img {
   max-width: 100%;

@@ -109,21 +109,29 @@ function render() {
     if (item.img && item.img.trim() !== '') {
       // 有图片路径，先设置占位符，然后加载图片
       card.className = 'card placeholder';
-      img.src = item.img;
+      // 确保路径正确（如果是相对路径，确保以 ./ 开头）
+      let imgPath = item.img;
+      if (imgPath && !imgPath.startsWith('http') && !imgPath.startsWith('/') && !imgPath.startsWith('./')) {
+        imgPath = './' + imgPath;
+      }
+      img.src = imgPath;
+      console.log('尝试加载图片:', imgPath, '原始路径:', item.img);
       
       img.onerror = function() {
         // 图片加载失败，保持占位符显示
-        console.warn('图片加载失败:', item.img);
+        console.warn('图片加载失败:', imgPath, '请检查图片是否已上传到GitHub');
         this.style.display = 'none';
       };
       
       img.onload = function() {
         // 图片加载成功，移除占位符背景，显示图片
+        console.log('图片加载成功:', imgPath);
         card.classList.remove('placeholder');
         this.style.display = 'block';
       };
     } else {
       // 没有图片路径，只显示占位符
+      console.warn('没有图片路径:', item.name);
       card.className = 'card placeholder';
       img.style.display = 'none';
     }

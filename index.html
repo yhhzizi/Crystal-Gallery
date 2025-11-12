@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Crystal Gallery｜首页</title>
   <meta name="description" content="Crystal Gallery 水晶画廊：探索与筛选水晶类别与单体。">
+  <meta property="og:title" content="Crystal Gallery - 水晶画廊">
+  <meta property="og:description" content="探索与筛选水晶类别与单体，查看产地、纹路、特征。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yhhzizi.github.io/Crystal-Gallery/">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -17,22 +22,22 @@
     <h2>筛选</h2>
     <fieldset>
       <legend>地域</legend>
-      <label><input type="checkbox" name="region" value="asia"> 亚洲</label>
-      <label><input type="checkbox" name="region" value="europe"> 欧洲</label>
-      <label><input type="checkbox" name="region" value="americas"> 美洲</label>
+      <label><input type="checkbox" name="region" value="asia" id="region-asia"> 亚洲</label>
+      <label><input type="checkbox" name="region" value="europe" id="region-europe"> 欧洲</label>
+      <label><input type="checkbox" name="region" value="americas" id="region-americas"> 美洲</label>
     </fieldset>
     <fieldset>
       <legend>颜色</legend>
-      <label><input type="checkbox" name="color" value="clear"> 透明</label>
-      <label><input type="checkbox" name="color" value="pink"> 粉</label>
-      <label><input type="checkbox" name="color" value="purple"> 紫</label>
-      <label><input type="checkbox" name="color" value="green"> 绿</label>
+      <label><input type="checkbox" name="color" value="clear" id="color-clear"> 透明</label>
+      <label><input type="checkbox" name="color" value="pink" id="color-pink"> 粉</label>
+      <label><input type="checkbox" name="color" value="purple" id="color-purple"> 紫</label>
+      <label><input type="checkbox" name="color" value="green" id="color-green"> 绿</label>
     </fieldset>
     <fieldset>
       <legend>晶系</legend>
-      <label><input type="checkbox" name="system" value="hexagonal"> 六方</label>
-      <label><input type="checkbox" name="system" value="cubic"> 等轴</label>
-      <label><input type="checkbox" name="system" value="trigonal"> 三方</label>
+      <label><input type="checkbox" name="system" value="hexagonal" id="system-hexagonal"> 六方</label>
+      <label><input type="checkbox" name="system" value="cubic" id="system-cubic"> 等轴</label>
+      <label><input type="checkbox" name="system" value="trigonal" id="system-trigonal"> 三方</label>
     </fieldset>
     <div class="filter-actions">
       <button id="clearFilters">清空</button>

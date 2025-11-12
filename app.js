@@ -187,7 +187,7 @@ async function loadData() {
     // 确保所有数据都有图片路径
     DATA.forEach(item => {
       if (!item.img || item.img.trim() === '') {
-        item.img = './crystal-real.png';
+        item.img = './assets/images/crystal-real.png';
         console.log('为', item.name, '添加默认图片路径');
       }
     });
@@ -200,7 +200,7 @@ async function loadData() {
       region: ["asia", "europe", "americas"][i % 3],
       color: ["clear", "pink", "purple", "green"][i % 4],
       system: ["hexagonal", "cubic", "trigonal"][i % 3],
-      img: './crystal-real.png'
+      img: './assets/images/crystal-real.png'
     }));
     console.warn('使用兜底数据，共', DATA.length, '条记录');
   }

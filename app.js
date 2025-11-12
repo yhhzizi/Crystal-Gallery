@@ -54,7 +54,7 @@ function normalizeItem(src, idx) {
 
 function getVisibleItems() {
   // 缩放越大，数量越少
-  const divisor = { 1: 1, 2: 1.5, 3: 2, 4: 3, 5: 4 }[state.zoom] || 2;
+  const divisor = { 1: 1, 2: 1.2, 3: 1.5, 4: 2, 5: 3 }[state.zoom] || 1.5;
   const base = Math.ceil(DATA.length / divisor);
 
   // 过滤交集逻辑
@@ -109,21 +109,10 @@ function render() {
     if (item.img && item.img.trim() !== '') {
       // 有图片路径，先设置占位符，然后加载图片
       card.className = 'card placeholder';
-      // 确保路径正确 - GitHub Pages 路径处理
+      // 直接使用数据文件中的路径（已经是相对路径 ./crystal-real.png）
       let imgPath = item.img;
-      // 如果路径以 ./ 开头，去掉它
-      if (imgPath && imgPath.startsWith('./')) {
-        imgPath = imgPath.substring(2);
-      }
-      // GitHub Pages: 如果路径不是以 / 开头，添加 /Crystal-Gallery/ 前缀
-      if (imgPath && !imgPath.startsWith('http') && !imgPath.startsWith('/')) {
-        imgPath = '/Crystal-Gallery/' + imgPath;
-      } else if (imgPath && imgPath.startsWith('/') && !imgPath.startsWith('/Crystal-Gallery')) {
-        // 如果已经是绝对路径但没有项目前缀，添加前缀
-        imgPath = '/Crystal-Gallery' + imgPath;
-      }
       img.src = imgPath;
-      console.log('尝试加载图片:', imgPath, '原始路径:', item.img);
+      console.log('尝试加载图片:', imgPath, '完整URL:', new URL(imgPath, window.location.href).href);
       
       img.onerror = function() {
         // 图片加载失败，保持占位符显示

@@ -181,18 +181,31 @@ function setInputsFromParams(params) {
 async function loadData() {
   try {
     const res = await fetch('./data/crystals.json', { cache: 'no-store' });
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
     const raw = await res.json();
     DATA = raw.map((x, i) => normalizeItem(x, i));
+    console.log('数据加载成功，共', DATA.length, '条记录');
+    // 确保所有数据都有图片路径
+    DATA.forEach(item => {
+      if (!item.img || item.img.trim() === '') {
+        item.img = './crystal-real.png';
+        console.log('为', item.name, '添加默认图片路径');
+      }
+    });
   } catch (e) {
-    // 兜底：若加载失败，用简单占位数据
+    console.error('数据加载失败:', e);
+    // 兜底：若加载失败，用简单占位数据，但都添加图片路径
     DATA = Array.from({ length: 60 }).map((_, i) => ({
       id: i + 1,
       name: `Crystal ${i + 1}`,
       region: ["asia", "europe", "americas"][i % 3],
       color: ["clear", "pink", "purple", "green"][i % 4],
       system: ["hexagonal", "cubic", "trigonal"][i % 3],
-      img: ''
+      img: './crystal-real.png'
     }));
+    console.warn('使用兜底数据，共', DATA.length, '条记录');
   }
 }
 

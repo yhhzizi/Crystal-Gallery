@@ -11,7 +11,7 @@
     "system": "trigonal",
     "features": { "hardness": "7", "cleavage": "不完全", "refractiveIndex": "1.544-1.553" },
     "texture": "云雾状纹理，常见粉红色调",
-    "images": { "thumb": "./assets/images/crystal-real.png", "full": "./assets/images/crystal-real.png", "gallery": [] },
+    "images": { "thumb": "./crystal-real.png", "full": "./crystal-real.png", "gallery": [] },
     "intro": "常见的粉色石英，常用于装饰与收藏。颜色来自钛、锰等微量元素。"
   },
   {
@@ -26,7 +26,7 @@
     "system": "trigonal",
     "features": { "hardness": "7", "cleavage": "不完全", "refractiveIndex": "1.544-1.553" },
     "texture": "晶面清晰，呈紫罗兰色，常见六方柱状",
-    "images": { "thumb": "./assets/images/crystal-real.png", "full": "./assets/images/crystal-real.png", "gallery": [] },
+    "images": { "thumb": "./crystal-real.png", "full": "./crystal-real.png", "gallery": [] },
     "intro": "常见的石英变种，紫色来源与铁离子相关。乌拉圭产紫水晶以深紫色著称。"
   },
   {
@@ -41,7 +41,7 @@
     "system": "trigonal",
     "features": { "hardness": "7", "cleavage": "不完全", "inclusions": "绿泥石包裹体" },
     "texture": "包裹体形成层状幻影，呈现山峰或金字塔图案",
-    "images": { "thumb": "./assets/images/crystal-real.png", "full": "./assets/images/crystal-real.png", "gallery": [] },
+    "images": { "thumb": "./crystal-real.png", "full": "./crystal-real.png", "gallery": [] },
     "intro": "内部包裹体呈现山峰或层纹的幻影效果。绿幽灵是收藏者喜爱的品种之一。"
   },
   {
@@ -56,7 +56,7 @@
     "system": "trigonal",
     "features": { "hardness": "7", "cleavage": "不完全", "transparency": "透明至半透明" },
     "texture": "透明至半透明，条纹清晰，常见六方柱状",
-    "images": { "thumb": "./assets/images/crystal-real.png", "full": "./assets/images/crystal-real.png", "gallery": [] },
+    "images": { "thumb": "./crystal-real.png", "full": "./crystal-real.png", "gallery": [] },
     "intro": "常见石英，透明度高，基础入门之选。四川产白水晶品质优良。"
   },
   {
@@ -71,7 +71,7 @@
     "system": "trigonal",
     "features": { "hardness": "7", "cleavage": "不完全", "colorSource": "铁离子" },
     "texture": "色泽温暖，晶面干净，常见金黄色调",
-    "images": { "thumb": "./assets/images/crystal-real.png", "full": "./assets/images/crystal-real.png", "gallery": [] },
+    "images": { "thumb": "./crystal-real.png", "full": "./crystal-real.png", "gallery": [] },
     "intro": "色调从浅黄到金黄，常见于饰品与摆件。巴西是黄水晶的主要产地之一。"
   },
   {
@@ -86,7 +86,7 @@
     "system": "trigonal",
     "features": { "hardness": "7", "cleavage": "不完全" },
     "texture": "淡粉色，质地细腻",
-    "images": { "thumb": "./assets/images/crystal-real.png", "full": "./assets/images/crystal-real.png", "gallery": [] },
+    "images": { "thumb": "./crystal-real.png", "full": "./crystal-real.png", "gallery": [] },
     "intro": "马达加斯加产粉晶色泽柔和，常用于雕刻与摆件。"
   },
   {
@@ -101,7 +101,7 @@
     "system": "monoclinic",
     "features": { "hardness": "6.5-7", "cleavage": "完全" },
     "texture": "多色性明显，常见紫粉渐变",
-    "images": { "thumb": "./assets/images/crystal-real.png", "full": "./assets/images/crystal-real.png", "gallery": [] },
+    "images": { "thumb": "./crystal-real.png", "full": "./crystal-real.png", "gallery": [] },
     "intro": "锂辉石变种，颜色从粉到紫，具有强多色性。"
   },
   {
@@ -116,7 +116,7 @@
     "system": "triclinic",
     "features": { "hardness": "5-6", "cleavage": "无" },
     "texture": "不透明，常见铁线纹理",
-    "images": { "thumb": "./assets/images/crystal-real.png", "full": "./assets/images/crystal-real.png", "gallery": [] },
+    "images": { "thumb": "./crystal-real.png", "full": "./crystal-real.png", "gallery": [] },
     "intro": "湖北绿松石历史悠久，颜色从蓝绿到绿色，常见铁线纹理。"
   }
 ]

@@ -1,10 +1,13 @@
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html, body {
+  min-height: 100%;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
   background: #F6F6F6; /* PRD 指定首页背景色 */
   color: #222;
+  padding-bottom: 60px; /* 为footer留出空间 */
 }
 .site-header, .site-footer {
   display: flex;
@@ -13,10 +16,19 @@ body {
   padding: 12px 16px;
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(6px);
-  position: sticky;
 }
-.site-header { top: 0; }
-.site-footer { bottom: 0; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
 .site-title { margin: 0; font-size: 18px; }
 .filter-toggle { padding: 6px 10px; }
 

@@ -102,24 +102,32 @@ function render() {
 
   items.forEach(item => {
     const card = document.createElement('div');
-    card.className = 'card placeholder';
     const img = document.createElement('img');
     img.alt = item.name;
     img.loading = 'lazy';
-    if (item.img) {
-      img.src = item.img; // 有真实图片时展示
+    
+    if (item.img && item.img.trim() !== '') {
+      // 有图片路径，先设置占位符，然后加载图片
+      card.className = 'card placeholder';
+      img.src = item.img;
+      
       img.onerror = function() {
-        // 如果图片加载失败，隐藏图片，显示占位符
+        // 图片加载失败，保持占位符显示
+        console.warn('图片加载失败:', item.img);
         this.style.display = 'none';
       };
+      
       img.onload = function() {
-        // 图片加载成功，移除占位符背景
+        // 图片加载成功，移除占位符背景，显示图片
         card.classList.remove('placeholder');
+        this.style.display = 'block';
       };
     } else {
-      // 没有图片时，隐藏img元素，使用占位符
+      // 没有图片路径，只显示占位符
+      card.className = 'card placeholder';
       img.style.display = 'none';
     }
+    
     card.appendChild(img);
     card.title = `${item.name}`;
     card.addEventListener('click', () => {
